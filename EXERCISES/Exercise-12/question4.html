@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>23BCE1016 Tarun Chebolu</title>
+        <style>
+            div{
+                height: 200px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="background-color: blue; position:absolute; left: 0px; top: 0px" onmouseover="up(this)" onmouseout="down(this)"></div>
+        <div style="background-color: red; position: absolute; left: 50px; top: 50px" onmouseover="up(this)" onmouseout="down(this)"></div>
+        <div style="background-color: green; position: absolute; left: 100px; top:100px" onmouseover="up(this)" onmouseout="down(this)"></div>
+
+        <script>
+            function up(e){
+                e.style.zIndex = "10";
+                e.innerHTML = "<h1 align='center'   >Z = 10</h1>";
+            }
+
+            function down(e){
+                e.style.zIndex = "";
+                e.innerHTML = "<h1>Z = 0</h1>";
+            }
+        </script>
+    </body>
+</html>

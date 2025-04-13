@@ -1,0 +1,37 @@
+#calculator
+{
+    background-color: rgb(155, 225, 230);
+    border-spacing: 10px;
+}
+
+td{
+    background-color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 3px grey;
+}
+
+.redButton{
+    background-color: rgb(255, 183, 183);
+    box-shadow: 0px 3px rgb(255, 126, 126);
+}
+
+.greenButton{
+    background-color: rgb(223, 255, 43);
+    box-shadow: 0px 3px rgb(147, 158, 98);
+}
+
+.operator{
+    background-color: rgb(253, 232, 236);
+}
+
+.screen{
+    background-color: rgb(150, 160, 172);
+    box-shadow: 0px -3px grey;
+}
+
+td:hover{
+   background-color: rgb(182, 116, 243); 
+   color: white;
+   box-shadow: 0px 1px rgb(97, 55, 97);
+}
