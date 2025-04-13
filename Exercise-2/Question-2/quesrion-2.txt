@@ -1,0 +1,32 @@
+<body>
+		<table border="3" cellspacing="0" cellpadding="20" bgcolor="blue" bordercolor="blue">
+			<tbody><tr>
+				<td>
+					<table border="3" cellspacing="0" cellpadding="20" bgcolor="yellow" bordercolor="blue">
+						<tbody><tr>
+							<td>
+								<table border="3" cellspacing="0" cellpadding="20" bgcolor="red" bordercolor="blue">
+									<tbody><tr>
+										<td>
+											<table border="3" cellspacing="0" cellpadding="20" bgcolor="white" bordercolor="blue">
+												<tbody><tr>
+													<td>
+														<table border="2" cellspacing="0" cellpadding="7" bgcolor="green" bordercolor="blue">
+															<tbody><tr>
+																<td><a href="https://www.w3schools.com/cssref/pr_border-width.php" style="color:white;">Click me</a></td>
+															</tr>
+														</tbody></table>
+													</td>
+												</tr>
+											</tbody></table>
+										</td>
+									</tr>
+								</tbody></table>
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+	
+</body>

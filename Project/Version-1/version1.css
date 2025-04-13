@@ -1,0 +1,12 @@
+#svgScreen{
+    background-color: black;    
+    height: 1200px;
+    width: 1200px;
+}
+
+body{
+    background-color: gray;
+}
+
+.node{
+}

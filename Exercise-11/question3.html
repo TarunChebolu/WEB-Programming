@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>23BCE1016 Tarun Chebolu</title>
+    <script>
+        function displayTime() {
+            document.getElementById("timeDisplay").innerHTML = new Date().toLocaleTimeString();
+            setTimeout(displayTime, 1000);
+        }
+        
+        function validateForm() {
+            isValid = true;
+            name = document.forms["myForm"]["name"].value;
+            zip = document.forms["myForm"]["zip"].value;
+            phone = document.forms["myForm"]["phone"].value;
+            email = document.forms["myForm"]["email"].value;
+            password = document.forms["myForm"]["password"].value;
+            pan = document.forms["myForm"]["pan"].value;
+            gender = document.forms["myForm"]["gender"];
+            preferences = document.forms["myForm"]["preferences"];
+            
+            emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            passwordPattern = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).{8,15}$/;
+            panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+
+            if (name == "" || name.length > 15) {
+                alert("Name is required and should not exceed 15 characters");
+            }
+            else if (zip == "" || isNaN(zip) || zip.length > 6) {
+                alert("Zip Code should be numeric and not exceed 6 digits");
+            }
+            else if (phone == "" || isNaN(phone) || phone.length != 10) {
+                alert("Phone number should be numeric and exactly 10 digits");
+            }
+            else if (!emailPattern.test(email)) {
+                alert("Invalid email format");
+            }
+            else if (!passwordPattern.test(password)) {
+                alert("Password must be 8-15 characters, contain a number, a letter, and a special character");
+            }
+            else if (!panPattern.test(pan)) {
+                alert("Invalid PAN number");
+            }else{
+
+                genderSelected = false;
+                for (let i = 0; i < gender.length; i++) {
+                    if (gender[i].checked) {
+                        genderSelected = true;
+                        break;
+                    }
+                }
+                if (!genderSelected) {
+                    alert("Please select a gender.");
+                }
+                
+                preferencesSelected = false;
+                for (let i = 0; i < preferences.length; i++) {
+                    if (preferences[i].checked) {
+                        preferencesSelected = true;
+                    }
+                }
+                if (!preferencesSelected) {
+                    alert("Please select at least one preference.");
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body onload="displayTime()">
+    <h2>Test JavaScript Form Validation</h2>
+    <div>Time: <span id="timeDisplay"></span></div>
+    <form name="myForm" onsubmit="validateForm()">
+        Name*: <input type="text" name="name"><br>
+        Address: <textarea name="address"></textarea><br>
+        Zip Code*: <input type="text" name="zip"><br>
+        Country*: <select name="country">
+            <option>USA</option>
+            <option>India</option>
+        </select><br>
+        Gender*: <input type="radio" name="gender" value="Male">Male
+                 <input type="radio" name="gender" value="Female">Female<br>
+        Preferences*: <input type="checkbox" name="preferences" value="Red">Red
+                      <input type="checkbox" name="preferences" value="Green">Green
+                      <input type="checkbox" name="preferences" value="Blue">Blue<br>
+        Phone*: <input type="text" name="phone"><br>
+        Email*: <input type="text" name="email"><br>
+        Password (8-15 characters)*: <input type="password" name="password"><br>
+        PAN No*: <input type="text" name="pan"><br>
+        <input type="submit" value="SEND">
+        <input type="reset" value="CLEAR">
+    </form>
+</body>
+</html>
